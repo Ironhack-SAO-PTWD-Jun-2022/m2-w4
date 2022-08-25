@@ -1,0 +1,38 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Renata"
+    },
+    {
+      "id": 2,
+      "name": "Hélio"
+    },
+    {
+      "name": "Jandson",
+      "id": 3
+    },
+    {
+      "name": "Gabriel",
+      "id": 4
+    },
+    {
+      "name": "João",
+      "id": 6
+    },
+    {
+      "name": "Caio",
+      "id": 7
+    }
+  ],
+  "pets": [
+    {
+      "id": 20,
+      "name": "José"
+    },
+    {
+      "name": "Joaquim",
+      "id": 21
+    }
+  ]
+}
