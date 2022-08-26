@@ -1,16 +1,23 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
+import ironApi from '../api/ironbnb.api';
 
 const ApartmentsPage = () => {
   const [ apartments, setApartments ] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://ironbnb-m3.herokuapp.com/apartments")
-      .then((response) => {
-        setApartments(response.data)
-      })
-      .catch((error) => window.alert('Erro ao conectar na API'));
+    // axios
+    //   .get("https://ironbnb-m3.herokuapp.com/apartments")
+    // ironApi.getApartmentsList()
+    //   .then((response) => {
+    //     setApartments(response.data)
+    //   })
+    //   .catch((error) => window.alert('Erro ao conectar na API'));
+    const getApartments = async () => {
+      const apartmentsList = await ironApi.getApartmentsList();
+      setApartments(apartmentsList);
+    }
+    getApartments();
   }, []);
 
   return (
